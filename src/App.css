@@ -1,5 +1,5 @@
 body {
-  background: #e5e5e5;
+  background: #E5E5E5;
 }
 
 .wrapper {
@@ -15,7 +15,7 @@ body {
 .wrapper > .navbar,
 .sidebar,
 .content {
-  background: #ffffff;
+  background: #FDFDFD;
   padding: 1em;
 }
 
@@ -69,3 +69,4 @@ display: none;
 .apexcharts-title-text{
   font-weight:100
 }
+

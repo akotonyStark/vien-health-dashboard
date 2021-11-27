@@ -23,6 +23,7 @@ function LineGraph({ caption, color, serieName }) {
     title: {
       text: caption,
       align: 'left',
+      
     },
     markers: {
       size: 3,

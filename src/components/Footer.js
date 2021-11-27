@@ -14,27 +14,27 @@ const Footer = () => {
       
     >
       <Grid item xs={3} >
-        <p className='mt-5'>
+        <p className='mt-5' style={{color: '#767676'}} >
           Counter Delivery, Carters Beach<br/> PostCentre, Westport
         </p>
       </Grid>
       <Grid item xs={3}>
         <h4>About</h4>
-        <p >Company</p>
-        <p >Team</p>
-        <p >Careers</p>
-        <p >Blog</p>
+        <p className={styles.links}>Company</p>
+        <p className={styles.links}>Team</p>
+        <p className={styles.links}>Careers</p>
+        <p className={styles.links}>Blog</p>
       </Grid>
       <Grid item xs={3}>
         <h4>Support</h4>
-        <p >Help Center</p>
-        <p >Cancellation Options</p>
-        <p >Neighborhood Support</p>
-        <p >Trust &amp; Safety</p>
+        <p className={styles.links}>Help Center</p>
+        <p className={styles.links}>Cancellation Options</p>
+        <p className={styles.links}>Neighborhood Support</p>
+        <p className={styles.links}>Trust &amp; Safety</p>
       </Grid>
       <Grid item xs={3}>
         <h4>Address</h4>
-        <p style={{ width: '80%', color: '#767676', marginBottom:'40px' }}>
+        <p style={{ color: '#767676', marginBottom:'40px' }}>
           Counter Delivery, Carters Beach <br/> PostCentre, Westport
         </p>
         <div>
@@ -95,4 +95,8 @@ const useStyles = makeStyles({
   copyright: {
     margin: '60px auto',
   },
+  links:{    
+      color:'#767676'    
+  }
+  
 })

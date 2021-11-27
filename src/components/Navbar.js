@@ -1,8 +1,9 @@
 import React from 'react'
-import { Box, Toolbar, IconButton, AppBar, Grid } from '@mui/material'
+import { Toolbar, IconButton, Grid } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import { InputGroup, FormControl } from 'react-bootstrap'
-import * as BiIcons from 'react-icons/bi'
+import * as BI from 'react-icons/bi'
+import * as MD from 'react-icons/md'
 
 const useStyles = makeStyles({
   mtop: {
@@ -14,38 +15,36 @@ const useStyles = makeStyles({
 function Navbar() {
   const classes = useStyles()
   return (
-    <Grid container spacing={2} justifyContent='center'>
-      <Grid item xs={7}>
-        <div className='searchInput'>
+    <Grid container spacing={2} >
+      <Grid item xs={8}>
+        <div>
           <InputGroup
             className='mb-6  lg-6 xl-8'
             style={{ width: 300, margin: '10px auto 0 auto' }}
           >
+            
             <FormControl
               placeholder='Add more'
               aria-describedby='basic-addon2'
+              style={{paddingLeft:'110px', background:'#F5F5F5', fontSize:'12px', color:'#767676', border: '0.5px solid #e8e8e8'}}
             />
+            <span className="badge rounded-pill inside-badge">Granger, IA <MD.MdCancel /></span>
             <InputGroup.Text style={{ background: '#016450', color: '#fff' }}>
-              <BiIcons.BiSearch />
+              <BI.BiSearch />
             </InputGroup.Text>
           </InputGroup>
         </div>
       </Grid>
-      <Grid item xs={2}>
+      <Grid item xs={1}>
         <div
-          className={classes.mtop}
-          style={{
-            display: 'flex',
-            textAlign: 'right',
-          }}
+          className={classes.mtop}          
         >
           Udwell Now
         </div>
       </Grid>
-      <Grid item xs={2}>
+      <Grid item xs={1}>
         <div
-          className={classes.mtop}
-          style={{ display: 'flex', alignContent: 'flex-end' }}
+          className={classes.mtop}          
         >
           Sell a property
         </div>
@@ -59,7 +58,7 @@ function Navbar() {
             aria-label='menu'
             sx={{ mr: 2 }}
           >
-            <BiIcons.BiMenuAltLeft />
+            <BI.BiMenuAltLeft />
           </IconButton>
         </Toolbar>
       </Grid>

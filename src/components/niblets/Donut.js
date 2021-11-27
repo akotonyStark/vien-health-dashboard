@@ -1,13 +1,27 @@
 import React from 'react'
-
 import Chart from 'react-apexcharts'
 
 function Donut({ colors, data }) {
   const options = {
     colors,
     dataLabels: {
-      enabled: false,
+      enabled: false,    
     },
+    plotOptions:{
+      pie:{
+        startAngle:0,
+        expandOnClick:true,
+        customScale: 0.7
+        },
+        donut:{
+          labels:{
+            show:false,
+            name:{
+              show: false
+            }
+          }
+        }
+    }
   }
 
   return (
@@ -15,8 +29,6 @@ function Donut({ colors, data }) {
       options={options}
       series={data}
       type='donut'
-      width={220}
-      height={200}
     />
   )
 }

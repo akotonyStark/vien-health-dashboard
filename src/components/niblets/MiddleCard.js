@@ -7,7 +7,7 @@ const useStyles = makeStyles({
   root: {
     border: '1px solid #f1f1f1',
     overflow: 'hidden',
-    height: 258,
+    height: 261,
     borderRadius: 5,
   },
   chart_container: {
@@ -15,8 +15,8 @@ const useStyles = makeStyles({
   },
   chart_text: {
     float: 'right',
-    marginTop: '45px',
-    marginRight: '20px',
+    marginTop: '35px',
+    marginRight: '30px',
   },
   icon_holder: {
     float: 'left',
@@ -36,25 +36,29 @@ const useStyles = makeStyles({
   card_header: {
     padding: '10px 20px',
   },
-  sub_title: {
+  desc: {
     fontSize: 11,
     padding: 0,
+    color: '#34AA44',
   },
-  title: {
+  caption: {
     margin: 0,
-    fontSize: 15,
   },
   card_header_menuIcon: {
     float: 'right',
     marginRight: 10,
     fontSize: 15,
   },
+  text_divider: {
+    justifySelf: 'left',
+    marginLeft: '30px',
+  },
 })
 
-function MidCard({
+function MiddleCard({
   chart,
-  title,
-  subTitle,
+  caption,
+  desc,
   chartAmount,
   chartText,
   chartNum,
@@ -67,11 +71,11 @@ function MidCard({
     <div className={classes.root}>
       <div className={classes.card_header}>
         <div className={classes.icon_holder} style={{ background: bgColor }}>
-          <BiIcons.BiUser className={classes.card_icon} />
+          <BiIcons.BiMoney className={classes.card_icon} />
         </div>
         <div style={{ float: 'left', width: '50%', marginLeft: 15 }}>
-          <h6 className={classes.title}>{title}</h6>
-          <span className={classes.sub_title}>{subTitle}</span>
+          <h6 className={classes.caption}>{caption}</h6>
+          <span className={classes.desc}>{desc}</span>
         </div>
         <div className={classes.card_header_menuIcon}>
           <BiIcons.BiDotsHorizontalRounded />
@@ -83,15 +87,17 @@ function MidCard({
       <div style={{ position: 'relative' }}>
         <div className={classes.chart_container}>{chart}</div>
         <div className={classes.chart_text}>
-          <h5 style={{ marginLeft: '60px' }}>{chartAmount}</h5>
-          <span style={{ marginLeft: '45px', marginBottom: 10, fontSize: 11 }}>
+          <h5 style={{ marginLeft: '35px' }}>{chartAmount}</h5>
+          <span style={{ marginLeft: '45px', marginBottom: 10 }}>
             {chartText}
           </span>
-          <Divider style={{ justifySelf: 'left', marginLeft: '30px' }} />
+          <Divider className={classes.text_divider} />
+          <h5 style={{ marginLeft: '70px', marginTop: 10 }}>{chartNum}</h5>
+          <span style={{ marginLeft: '45px' }}>{numText}</span>
         </div>
       </div>
     </div>
   )
 }
 
-export default MidCard
+export default MiddleCard

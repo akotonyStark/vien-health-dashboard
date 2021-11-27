@@ -61,3 +61,11 @@ body {
   background: #e8e8e8;
   color: #1a1a1a
 }
+
+.apexcharts-legend-series{
+display: none;
+}
+
+.apexcharts-title-text{
+  font-weight:100
+}

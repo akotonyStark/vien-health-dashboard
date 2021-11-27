@@ -1,8 +1,7 @@
 import React from 'react'
-
 import Chart from 'react-apexcharts'
 import * as BiIcons from 'react-icons/bi'
-function LineChart({ title, color, serieName }) {
+function LineGraph({ caption, color, serieName }) {
   const series = [
     {
       name: serieName,
@@ -22,7 +21,7 @@ function LineChart({ title, color, serieName }) {
     },
 
     title: {
-      text: title,
+      text: caption,
       align: 'left',
     },
     markers: {
@@ -59,4 +58,4 @@ function LineChart({ title, color, serieName }) {
   )
 }
 
-export default LineChart
+export default LineGraph

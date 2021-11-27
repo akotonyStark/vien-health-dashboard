@@ -1,61 +1,41 @@
 import React from 'react'
-import { makeStyles } from '@mui/styles'
-
 import { Grid, Avatar, Stack } from '@mui/material'
 import * as FaIcons from 'react-icons/fa'
 import * as FiIcons from 'react-icons/fi'
+import { makeStyles } from '@mui/styles'
 
-const useStyles = makeStyles({
-  txt_mute: {
-    color: '#767676',
-  },
-  bs: {
-    boxShadow:
-      'rgb(0 0 0 / 20%) 0px 3px 5px -1px, rgb(0 0 0 / 14%) 0px 6px 10px 0px, rgb(0 0 0 / 12%) 0px 1px 18px 0px',
-  },
-  end_note: {
-    margin: '0px auto',
-  },
-  dot: {
-    fontSize: 60,
-    color: '#A3A3A3',
-  },
-})
 
 const Footer = () => {
-  const classes = useStyles()
+  const styles = useStyles()
   return (
     <Grid
       container
-      spacing={2}
-      style={{ margin: '25px auto' }}
-      xm={12}
-      lg={11}
-      xl={10}
-      item
+      xl={12}
+      
     >
-      <Grid item xs={3}>
+      <Grid item xs={3} >
         <p className='mt-5'>
-          Counter Delivery, Carters Beach PostCentre, Westport
+          Counter Delivery, Carters Beach<br/> PostCentre, Westport
         </p>
       </Grid>
       <Grid item xs={3}>
         <h4>About</h4>
-        <p className={classes.txt_mute}>Company</p>
-        <p className={classes.txt_mute}>Team</p>
-        <p className={classes.txt_mute}>Careers</p>
-        <p className={classes.txt_mute}>Blog</p>
+        <p >Company</p>
+        <p >Team</p>
+        <p >Careers</p>
+        <p >Blog</p>
       </Grid>
       <Grid item xs={3}>
         <h4>Support</h4>
-        <p className={classes.txt_mute}>Help Center</p>
-        <p className={classes.txt_mute}>Neighborhood Support</p>
-        <p className={classes.txt_mute}>Trust & Safety</p>
+        <p >Help Center</p>
+        <p >Cancellation Options</p>
+        <p >Neighborhood Support</p>
+        <p >Trust &amp; Safety</p>
       </Grid>
       <Grid item xs={3}>
         <h4>Address</h4>
-        <p style={{ width: '80%', color: '#767676' }}>
-          Counter Delivery, Carters Beach PostCentre, Westport
+        <p style={{ width: '80%', color: '#767676', marginBottom:'40px' }}>
+          Counter Delivery, Carters Beach <br/> PostCentre, Westport
         </p>
         <div>
           <Stack direction='row' spacing={2}>
@@ -89,11 +69,11 @@ const Footer = () => {
           </Stack>
         </div>
       </Grid>
-      <div className={classes.end_note}>
+      <div className={styles.copyright}>
         <p>
-          ©Udwell, LLC. All rights reserved.{' '}
-          <span className={classes.dot}>.</span> Terms & Conditions{' '}
-          <span className={classes.dot}>.</span> Privacy Policy
+          &copy;Udwell, LLC. All rights reserved.{' '}
+          <span className={styles.dot}>.</span> Terms &amp; Conditions{' '}
+          <span className={styles.dot}>.</span> Privacy Policy
         </p>
       </div>
     </Grid>
@@ -101,3 +81,18 @@ const Footer = () => {
 }
 
 export default Footer
+
+
+const useStyles = makeStyles({
+  bs: {
+    boxShadow:
+      'rgb(0 0 0 / 20%) 0px 3px 5px -1px, rgb(0 0 0 / 14%) 0px 6px 10px 0px, rgb(0 0 0 / 12%) 0px 1px 18px 0px',
+  },  
+  dot: {
+    fontSize: 3,
+    color: '#A3A3A3',
+  },
+  copyright: {
+    margin: '60px auto',
+  },
+})

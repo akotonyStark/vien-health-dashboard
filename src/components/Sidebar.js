@@ -7,7 +7,7 @@ import Picture from '../images/alex.png'
 
 function Sidebar() {
   return (
-    <div style={{ padding: '30px 20px 30px 20px' }}>
+    <div style={{ padding: '20px' }}>
       <div style={{ textAlign: 'center', paddingBottom: '20px' }}>
         <img
           src={Picture}         

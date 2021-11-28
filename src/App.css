@@ -66,6 +66,9 @@ body {
 display: none;
 }
 
+div.apexcharts-toolbar{
+ display:none; 
+}
 .apexcharts-title-text{
   font-weight:100
 }
